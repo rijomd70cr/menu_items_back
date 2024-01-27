@@ -3,7 +3,7 @@ const MiscServices = require("../Services/MiscServices");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URL_MULTI);
+    await mongoose.connect(process.env.MONGO_URI);
     const dbConnection = mongoose.connection;
     dbConnection.on('error', console.error.bind(console, 'Connection error:'));
     dbConnection.once('open', () => {

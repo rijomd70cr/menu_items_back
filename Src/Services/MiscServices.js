@@ -29,8 +29,8 @@ module.exports = {
   },
   generateUser: async (user) => {
     try {
-      const encryptionKey = process.env.ENCRYPTUSERKEY;
-      const iv = process.env.INITIALIZATIONVECTOR;
+      const encryptionKey = process.env.ENCRYPT_USER_KEY;
+      const iv = process.env.INITIALIZATION_VECTOR;
 
       const { name, email, userRole, _id } = user;
       const selectedUser = { name, email, userRole, _id };
